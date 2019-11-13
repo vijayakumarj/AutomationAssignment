@@ -1,39 +1,34 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
-    <PackageReference Include="MSTest.TestAdapter" Version="1.4.0" />
-    <PackageReference Include="MSTest.TestFramework" Version="1.4.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
     <PackageReference Include="coverlet.collector" Version="1.0.1" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.0.0" />
     <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="78.0.3904.7000" />
     <PackageReference Include="SpecFlow" Version="3.0.225" />
+    <PackageReference Include="SpecFlow.MsTest" Version="3.0.225" />
     <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.0.225" />
-    <PackageReference Include="SpecRun.SpecFlow" Version="3.0.391" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\" />
-    <Folder Include="PageFactory\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="FeatureFiles\SpecFlowFeature1.feature.cs">
+    <Compile Update="FeatureFiles\RegisterScenario.feature.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>SpecFlowFeature1.feature</DependentUpon>
+      <DependentUpon>RegisterScenario.feature</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
-    <SpecFlowFeatureFiles Update="FeatureFiles\SpecFlowFeature1.feature">
+    <SpecFlowFeatureFiles Update="FeatureFiles\RegisterScenario.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>SpecFlowFeature1.feature.cs</LastGenOutput>
+      <LastGenOutput>RegisterScenario.feature.cs</LastGenOutput>
     </SpecFlowFeatureFiles>
   </ItemGroup>
 

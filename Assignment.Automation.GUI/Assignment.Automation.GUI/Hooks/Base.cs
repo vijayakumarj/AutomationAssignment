@@ -1,7 +1,5 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using OpenQA.Selenium.Chrome;
 using TechTalk.SpecFlow;
 
 namespace Assignment.Automation.GUI.Hooks
@@ -9,12 +7,11 @@ namespace Assignment.Automation.GUI.Hooks
     [Binding]
     public class Base
     {
-        public IWebDriver driver;
-
         [BeforeScenario]
         public void BeforeScenario()
         {
-
+            Resources.StaticResources.driver = new ChromeDriver();
+            Resources.StaticResources.driver.Navigate().GoToUrl("http://automationpractice.com/index.php");
         }
 
         [AfterScenario]
