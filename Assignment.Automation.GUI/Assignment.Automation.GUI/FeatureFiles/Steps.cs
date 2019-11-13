@@ -8,7 +8,7 @@ namespace Assignment.Automation.GUI.FeatureFiles
     [Binding]
     public class SpecFlowFeature1Steps : Base
     {
-        [Given(@"Matt, a new customer navigates to application sign-in page")]
+        [Given(@"Matt, one new customer navigates to application sign-in page")]
         public void GivenMattANewCustomerNavigatesToApplicationSign_InPage()
         {
             Home homepage = new Home();
