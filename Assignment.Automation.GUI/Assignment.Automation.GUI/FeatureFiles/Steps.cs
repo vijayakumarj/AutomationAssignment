@@ -6,7 +6,7 @@ using TechTalk.SpecFlow;
 namespace Assignment.Automation.GUI.FeatureFiles
 {
     [Binding]
-    public class SpecFlowFeature1Steps : Base
+    public class SpecFlowFeature1Steps 
     {
         [Given(@"Matt, one new customer navigates to application sign-in page")]
         public void GivenMattANewCustomerNavigatesToApplicationSign_InPage()
@@ -19,7 +19,7 @@ namespace Assignment.Automation.GUI.FeatureFiles
         public void GivenMattRegistersAsANewUserOfTheApplication()
         {
             CreateNewAccount createNewAccountPage = new CreateNewAccount();
-            createNewAccountPage.EnterText("test@iop.com");
+            createNewAccountPage.EnterTextEmail("test@iop.com");
             createNewAccountPage.ClickButtonCreateAccount();
         }
         
